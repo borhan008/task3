@@ -23,6 +23,8 @@ class GameRule {
     for (let i = 0; i < args.length; i++) {
       console.log(`${i + 1} - ${args[i]}`);
     }
+    console.log("? - Help");
+    console.log("0 - Exit");
   }
 }
 
@@ -59,7 +61,7 @@ class ShowTable extends GameTable {
   }
   display() {
     let arr = this.calc();
-    var table = new AsciiTable3()
+    var table = new AsciiTable3("Help Table")
       .setHeading("User | Computer > ", ...args)
       .addRowMatrix(arr);
 
